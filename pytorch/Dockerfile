@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.0-cudnn7-runtime
+FROM nvidia/cuda:8.0-cudnn7-runtime
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
