@@ -18,7 +18,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         scikit-learn \
         pandas \
         tqdm && \
-    /opt/conda/bin/conda install -y pytorch torchvision -c pytorch && \
+    /opt/conda/bin/conda install -y pytorch cudatoolkit=8.0 torchvision -c pytorch && \
     /opt/conda/bin/conda clean -ya && \
     /opt/conda/bin/pip install pretrainedmodels
 
