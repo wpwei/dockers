@@ -16,6 +16,10 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         ipython \
         scikit-learn \
         pandas \
+        xgboost \
+        lightgbm \
+        jupyter \
+        notebook \
         tqdm && \
     /opt/conda/bin/conda install -y pytorch torchvision -c pytorch && \
     /opt/conda/bin/conda clean -ya && \
