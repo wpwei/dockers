@@ -10,6 +10,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
     ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
     /opt/conda/bin/conda install -y \
+        python=3.6.8 \
         numpy \
         pyyaml \
         scipy \
@@ -18,6 +19,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         pandas \
         lightgbm \
         notebook \
+        pyzmq \
         tqdm && \
     /opt/conda/bin/conda install xgboost=0.72.1 -c conda-forge && \
     /opt/conda/bin/conda install -y pytorch torchvision -c pytorch && \
