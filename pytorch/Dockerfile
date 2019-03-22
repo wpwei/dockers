@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.0-cudnn7-runtime
+FROM nvidia/cuda:10.1-cudnn7-runtime
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
@@ -19,8 +19,8 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         lightgbm \
         notebook \
         tqdm && \
-    /opt/conda/bin/conda install xgboost -c conda-forge && \
-    /opt/conda/bin/conda install -y pytorch torchvision -c pytorch && \
+    /opt/conda/bin/conda install xgboost imageio -c conda-forge && \
+    /opt/conda/bin/conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch && \
     /opt/conda/bin/conda clean -ya && \
     /opt/conda/bin/pip install pretrainedmodels
 
