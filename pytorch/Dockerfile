@@ -3,6 +3,7 @@ FROM nvidia/cuda:8.0-cudnn7-runtime-ubuntu16.04
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
         curl \
+        git \
         bzip2 &&\
     rm -rf /var/lib/apt/lists/*
 
