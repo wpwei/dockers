@@ -22,7 +22,8 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
     /opt/conda/bin/conda install xgboost imageio -c conda-forge && \
     /opt/conda/bin/conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch && \
     /opt/conda/bin/conda clean -ya && \
-    /opt/conda/bin/pip install git+https://github.com/wpwei/pretrained-models.pytorch.git@vision_bug_fix
+    /opt/conda/bin/pip install git+https://github.com/wpwei/pretrained-models.pytorch.git@vision_bug_fix && \
+    /opt/conda/bin/pip install git+https://github.com/BorealisAI/advertorch.git
 
 ENV PATH /opt/conda/bin:$PATH
 
