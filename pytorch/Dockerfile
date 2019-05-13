@@ -11,9 +11,9 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
     ~/miniconda.sh -b -p /opt/conda && \
     rm ~/miniconda.sh && \
     /opt/conda/bin/conda install -y \
+        scipy \
         numpy \
         pyyaml \
-        scipy \
         ipython \
         scikit-learn \
         pandas \
