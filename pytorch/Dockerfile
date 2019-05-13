@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-runtime-centos7
+FROM nvidia/cuda:10.1-cudnn7-runtime
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
