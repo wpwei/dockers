@@ -18,8 +18,9 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         pandas \
         lightgbm \
         notebook \
+        matplotlib \
         tqdm && \
-    /opt/conda/bin/conda install xgboost imageio -c conda-forge && \
+    /opt/conda/bin/conda install -y xgboost imageio -c conda-forge && \
     /opt/conda/bin/conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch && \
     /opt/conda/bin/conda clean -ya && \
     /opt/conda/bin/pip install pretrainedmodels
