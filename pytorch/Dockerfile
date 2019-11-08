@@ -22,6 +22,7 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         matplotlib \
         seaborn \
         ipywidgets \
+        pylint \
         tqdm && \
     /opt/conda/bin/conda install -y xgboost imageio tensorboard -c conda-forge && \
     /opt/conda/bin/conda install -y pytorch torchvision cudatoolkit=10.1 -c pytorch && \
