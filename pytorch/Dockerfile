@@ -2,7 +2,8 @@ FROM nvidia/cuda:10.1-cudnn7-runtime
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
-        curl &&\
+        curl \
+        git &&\
     rm -rf /var/lib/apt/lists/*
 
 RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh  && \
@@ -20,9 +21,10 @@ RUN curl -o ~/miniconda.sh -O  https://repo.continuum.io/miniconda/Miniconda3-la
         notebook \
         matplotlib \
         seaborn \
+        ipywidgets \
         tqdm && \
     /opt/conda/bin/conda install -y xgboost imageio tensorboard -c conda-forge && \
-    /opt/conda/bin/conda install -y pytorch torchvision cudatoolkit=10.0 -c pytorch && \
+    /opt/conda/bin/conda install -y pytorch torchvision cudatoolkit=10.1 -c pytorch && \
     /opt/conda/bin/conda clean -ya && \
     /opt/conda/bin/pip install pretrainedmodels
 
