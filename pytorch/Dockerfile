@@ -27,8 +27,9 @@ RUN apt-get update \
         torchvision \
         cudatoolkit=10.1 \
     && /opt/conda/bin/pip install \
-    pretrainedmodels \
-    pytorch-lightning \
+        pretrainedmodels \
+        pytorch-lightning \
+        simpy \
     #
     # clean up
     && /opt/conda/bin/conda clean -ya \
@@ -40,4 +41,3 @@ ENV PATH /opt/conda/bin:$PATH
 
 
 
-        
