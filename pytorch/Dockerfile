@@ -22,6 +22,7 @@ RUN apt-get update \
         xgboost \
         imageio \
         scikit-learn \
+        tornado \
     && /opt/conda/bin/conda install -y -c pytorch \
         pytorch \
         torchvision \
