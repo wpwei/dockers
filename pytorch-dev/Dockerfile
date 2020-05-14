@@ -18,7 +18,7 @@ RUN apt-get update \
         notebook \
         ipywidgets \
     && /opt/conda/bin/conda install -y flake8 -c anaconda \
-    && /opt/conda/bin/conda install -y yapf tensorboard -c conda-forge \
+    && /opt/conda/bin/conda install -y yapf tensorboard jupyterlab -c conda-forge \
     #
     # Create a non-root user
     && groupadd --gid $USER_GID $USERNAME \
