@@ -17,6 +17,7 @@ RUN apt-get update \
         lightgbm \
         matplotlib \
         seaborn \
+        numba \
         tqdm \
     && /opt/conda/bin/conda install -y -c conda-forge \
         xgboost \
