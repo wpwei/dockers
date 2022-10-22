@@ -1,4 +1,4 @@
-FROM nvidia/cuda:10.1-cudnn7-runtime
+FROM --platform=linux/amd64 nvidia/cuda:11.6.1-cudnn8-runtime-ubuntu20.04
 
 RUN apt-get update \
     #
@@ -23,15 +23,13 @@ RUN apt-get update \
         xgboost \
         imageio \
         scikit-learn \
-        tornado \
+        cudatoolkit=11.6 \
+        pytorch-lightning \
+        networkx \
     && /opt/conda/bin/conda install -y -c pytorch \
         pytorch \
         torchvision \
-        cudatoolkit=10.1 \
-    && /opt/conda/bin/pip install \
-        pretrainedmodels \
-        pytorch-lightning \
-        simpy \
+        torchaudio \
     #
     # clean up
     && /opt/conda/bin/conda clean -ya \
